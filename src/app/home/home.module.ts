@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { IonicModule } from "@ionic/angular";
+import { FormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
 
-import { HomePage } from './home.page';
-import { FivAppBarModule } from '@fivethree/core';
+import { HomePage } from "./home.page";
+import { FivAppBarModule, FivFabModule, FivIconModule } from "@fivethree/core";
 
 @NgModule({
   imports: [
@@ -14,12 +14,14 @@ import { FivAppBarModule } from '@fivethree/core';
     IonicModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomePage
-      }
+        path: "",
+        component: HomePage,
+      },
     ]),
-    FivAppBarModule
+    FivAppBarModule,
+    FivFabModule,
+    FivIconModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
